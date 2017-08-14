@@ -62,27 +62,27 @@ def pack_usint(n):
 
 def pack_int(n):
     """pack 16 bit into 2 bytes little endian"""
-    return struct.pack('<h', n)
+    return struct.pack('<h', int(n))
 
 
 def pack_uint(n):
     """pack 16 bit into 2 bytes little endian"""
-    return struct.pack('<H', n)
+    return struct.pack('<H', int(n))
 
 
 def pack_dint(n):
     """pack 32 bit into 4 bytes little endian"""
-    return struct.pack('<i', n)
+    return struct.pack('<i', int(n))
 
 
 def pack_real(r):
     """unpack 4 bytes little endian to int"""
-    return struct.pack('<f', r)
+    return struct.pack('<f', int(r))
 
 
 def pack_lint(l):
     """unpack 4 bytes little endian to int"""
-    return struct.pack('<q', l)
+    return struct.pack('<q', int(l))
 
 
 def unpack_bool(st):
